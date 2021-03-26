@@ -1,7 +1,7 @@
 # Assembly
 mini programmes en assembleur NASM
 
-Mini programme d'input/output en assembleur NASM.
+Mini programme d'input/output en assembleur NASM. De nouveaux programmes arriveront bientot.
 
 Pour compiler :
 
