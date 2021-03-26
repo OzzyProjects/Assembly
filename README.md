@@ -10,7 +10,7 @@ et envoie un "Hello World" en reponse à la connection.
 
 - Jeu devinez quel nombre je suis (guess number). (6 essais par défaut)
 
-Pour compiler l'un des deux :
+Pour compiler l'un des trois :
 
 nasm -f elf hello.asm ou socket.asm ou guess_number.asm
 
