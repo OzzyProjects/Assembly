@@ -1,10 +1,10 @@
 # Assembly
 
-Serie de mini programmes en assembleur NASM
+Serie de mini programmes en assembleur NASM (en cours)
 
 - Mini programme d'input/output (hello.asm)
 
-- Exemple basique d'un server socket qui ecoute sur le port 9001. Il affiche les headers des requetes de connexions des clients (socket.asm)
+- Exemple minimal d'un server socket qui ecoute sur le port 9001. Il affiche les headers des requetes de connexions des clients (socket.asm)
 
 et envoie un "Hello World" en reponse à la connection.
 
