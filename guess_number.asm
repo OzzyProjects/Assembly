@@ -117,16 +117,11 @@ _loopconvert_nomul:
 
 _reenter:
 
-	
-
 	call __write
 	mov ebx, 1 
 	mov ecx, reenter
 	mov edx, reenter_len
 	call __syscall
-
-	
-
 	jmp _loop
 	
 _toohigh:
@@ -158,8 +153,6 @@ _again:
 
 _lose:
 
-	
-
 	call __write
 	mov ebx, 1 
 	mov ecx, youlose
@@ -187,13 +180,9 @@ _lose:
 
 _convertok:
 
-	
-
 	cmp eax, [randint]
 	jg _toohigh
 	jl _toolow
-
-	
 
 	call __write
 	mov ebx, 1 
@@ -207,8 +196,6 @@ _exit:
 
 	push ebx
 
-	
-
 	call __write
 	mov ebx, 1 
 	mov ecx, goodbye
@@ -216,8 +203,6 @@ _exit:
 	call __syscall
 	mov ebx, 2 
 	call __syscall
-
-	
 
 	call __write
 	mov ebx, 1 
@@ -227,8 +212,6 @@ _exit:
 	mov ebx, 2 
 	call __syscall
 
-	
-
 	call __exit
 	pop ebx
 	call __syscall
@@ -236,11 +219,6 @@ _exit:
 
 
 __itoa_init:
-
-	
-	
-	
-	
 
 	pop dword [_itoabuf]
 
@@ -273,12 +251,6 @@ __itoa_knowndigits:
 
 __itoa_loopend:
 
-	
-	
-	
-	
-	
-
 	mov edx, ecx
 	mov ecx, ebx
 	
@@ -287,9 +259,6 @@ __itoa_loopend:
 __itoa_loop2:
 
 	push eax
-
-	
-
 	mov eax, edx
 	mov edx, 0 
 	mov ebx, 10 
@@ -297,13 +266,9 @@ __itoa_loop2:
 	idiv ebx
 	mov ebx, eax 
 	
-	
-
 	mov eax, [esp] 
 	mov edx, 0 
 	idiv ebx 
-
-	
 
 	mov edx, [esp+4] 
 	sub edx, ecx
@@ -314,12 +279,8 @@ __itoa_loop2:
 
 	sub eax, 48 
 
-	
-
 	imul eax, ebx
 
-	
-	
 	mov edx, ebx 
 	
 	pop ebx 
@@ -328,15 +289,9 @@ __itoa_loop2:
 
 	loop __itoa_loop2
 
-	
-	
-
 	mov eax, _itoabuf
 	pop ebx
-
-	
-
-	pop edx
+    pop edx
 	pop ecx	
 
 	ret
