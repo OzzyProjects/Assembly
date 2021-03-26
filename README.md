@@ -6,13 +6,15 @@ Serie de mini programmes en assembleur NASM (en cours)
 
 - Exemple minimal d'un server socket qui ecoute sur le port 9001. Il affiche les headers des requetes de connexions des clients (socket.asm)
 
+- Jeu devinez quel nombre je suis (guess number). (6 essais par défaut)
+
 et envoie un "Hello World" en reponse à la connection.
 
 Pour compiler l'un des deux :
 
-nasm -f elf hello.asm ou socket.asm
+nasm -f elf hello.asm ou socket.asm ou guess_number.asm
 
-ld -m elf_i386 hello.o ou socket.o -o programme
+ld -m elf_i386 hello.o ou socket.o ou guess_number.o -o programme
 
 ./programme
 
