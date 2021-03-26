@@ -34,7 +34,7 @@ printLoop:
  
  
 ;------------------------------------------
-; fonction qui print un integer avec linefeed
+; fonction qui print un integer avec retour à la ligne
 ;------------------------------------------
 iprintLF:
     call    iprint         
@@ -94,7 +94,7 @@ sprint:
  
  
 ;------------------------------------------
-; fonction qui affiche une chaine de caracteres avec line feed
+; fonction qui affiche une chaine de caracteres avec retour à la ligne
 ;------------------------------------------
 sprintLF:
     call    sprint
