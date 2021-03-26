@@ -9,7 +9,7 @@
  
 SECTION .data
 ; notre reponse HTTP
-response db 'HTTP/1.1 200 OK', 0Dh, 0Ah, 'Content-Type: text/html', 0Dh, 0Ah, 'Content-Length: 14', 0Dh, 0Ah, 0Dh, 0Ah, 'Hello World!', 0Dh, 0Ah, 0h
+reponse db 'HTTP/1.1 200 OK', 0Dh, 0Ah, 'Content-Type: text/html', 0Dh, 0Ah, 'Content-Length: 14', 0Dh, 0Ah, 0Dh, 0Ah, 'Hello World!', 0Dh, 0Ah, 0h
  
 SECTION .bss
 buffer resb 255,                ; variable pour stocker les headers de la requete
@@ -93,7 +93,7 @@ _read:                            ; lit et affiche sur le terminal les headers d
 _write:                          ; envoie la reponse au client avec Hello World
  
     mov     edx, 78             
-    mov     ecx, response
+    mov     ecx, reponse
     mov     ebx, esi
     mov     eax, 4
     int     80h
