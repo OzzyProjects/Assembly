@@ -79,7 +79,7 @@ _fork:
  
     jmp     _accept
  
-_read:
+_read:                            ; lit et affiche sur le terminal les headers de la requete du client
  
     mov     edx, 255            
     mov     ecx, buffer
@@ -90,7 +90,7 @@ _read:
     mov     eax, buffer
     call    sprintLF
  
-_write:
+_write:                          ; envoie la reponse au client avec Hello World
  
     mov     edx, 78             
     mov     ecx, response
