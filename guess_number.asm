@@ -345,7 +345,7 @@ section .data
 	toohigh db "Trop haut !", 0xa, 0xa
 	toohigh_len equ $-toohigh
 
-	toolow db "Tros bas !", 0xa, 0xa
+	toolow db "Trop bas !", 0xa, 0xa
 	toolow_len equ $-toolow
 
 	youwin db 0x7, 0xa, "#^$&^@%#^@#! C'est exact ! Vous avez gagné !", 0xa, 0xa
